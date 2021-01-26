@@ -1,0 +1,15 @@
+{
+  "name": "Vcc",
+  "keywords": "Supply voltage",
+  "description": "Measures supply voltage",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/felias-fogg/Vcc.git"
+  },
+  "frameworks": "arduino",
+  "platforms":
+  [
+    "atmelavr",
+  ]
+}
