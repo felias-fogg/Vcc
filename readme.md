@@ -11,9 +11,9 @@ The other flavor of the method uses a calibration value that is stored in EEPROM
 	...
 	int milliVolts;
 	...
-	milliVolts = Vcc.measure(); // uses calibration value from EEPROM, 10 repetitions
+	milliVolts = Vcc::measure(); // uses calibration value from EEPROM, 10 repetitions
 	...
-	milliVolts = Vcc.measure(100, 1100); // 100 repetitions, 1100 as calibration value
+	milliVolts = Vcc::measure(100, 1100); // 100 repetitions, 1100 as calibration value
 
 The library should work with ATmega8, ATmegaX8, ATmega32u4, ATmegaX4, ATmegaX0, ATtiny43U, ATtinyX4(A), ATtinyX5, ATtinyX61(A), ATtinyX7, ATtinyX8, ATtiny828, and ATtiny1634. It will not work with ATtinyX13 because of the lack of an ADC. Concerning ATmega8, one should be aware that the bandgap voltage is 1.3 volts instead of 1.1 volts. But who uses an ATmega8 these days?
 
