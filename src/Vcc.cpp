@@ -46,7 +46,7 @@ int Vcc::measure(int repetition, int intref)
 #if defined(PRR)
   oldprr = PRR;
   PRR &= ~_BV(PRADC);
-#elif definded(PRR0)
+#elif defined(PRR0)
   oldprr = PRR0;
   PRR0 &= ~_BV(PRADC);  
 #endif
