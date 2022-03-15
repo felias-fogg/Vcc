@@ -8,3 +8,4 @@ V1.0.3
  - added a few missed MCUs
  - added badges in readme file
  - added CI workflow
+ - corrected ATmega8 measurements

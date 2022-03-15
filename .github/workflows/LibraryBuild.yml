@@ -83,9 +83,9 @@ jobs:
           - arduino-boards-fqbn:  MiniCore:avr:168
             platform-url: https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json
           - arduino-boards-fqbn:  MightyCore:avr:1284
-            platform-url: https://mcudude.github.io/MiniCore/package_MCUdude_MightyCore_index.json
+            platform-url: https://mcudude.github.io/MightyCore/package_MCUdude_MightyCore_index.json
           - arduino-boards-fqbn:  MightyCore:avr:164
-            platform-url: https://mcudude.github.io/MiniCore/package_MCUdude_MightyCore_index.json
+            platform-url: https://mcudude.github.io/MightyCore/package_MCUdude_MightyCore_index.json
 
       # Do not cancel all jobs / architectures if one job fails
       fail-fast: false

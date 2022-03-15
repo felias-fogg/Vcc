@@ -11,7 +11,7 @@ int Vcc::measure(int repetition, int intref)
   || defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega644__) || defined(__AVR_ATmega644A__)  \
   || defined(__AVR_ATmega644PA__) || defined(__AVR_ATmega324__) || defined(__AVR_ATmega324A__) || defined(__AVR_ATmega324PA__)  \
   || defined(__AVR_ATmega164__) || defined(__AVR_ATmega164A__) || defined(__AVR_ATmega164PA__)  \
-  || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega16U4__) ||defined(__AVR_ATmega8__)
+  || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega16U4__) 
   ADMUX =  _BV(REFS0) | _BV(MUX4) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
 #elif defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) ||  defined(__AVR_ATmega328PB__) || \
   defined (__AVR_ATmega168__) || defined (__AVR_ATmega168A__)  || defined (__AVR_ATmega168PA__) || \
@@ -19,7 +19,7 @@ int Vcc::measure(int repetition, int intref)
   defined (__AVR_ATmega88__) || defined (__AVR_ATmega88A__) || defined (__AVR_ATmega88P__)  || \
   defined (__AVR_ATmega88PA__) || defined (__AVR_ATmega88PB__) ||	\
   defined (__AVR_ATmega48__) || defined (__AVR_ATmega48A__) || defined (__AVR_ATmega48P__) || \
-  defined (__AVR_ATmega48PA__)|| defined (__AVR_ATmega48PB__) 
+  defined (__AVR_ATmega48PA__)|| defined (__AVR_ATmega48PB__) || defined(__AVR_ATmega8__) 
   ADMUX = _BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
 #elif  defined(__AVR_ATtiny43U__)
   ADMUX = _BV(MUX2) || _BV(MUX0);
@@ -81,5 +81,5 @@ int Vcc::measure(int repetition, int intref)
 
 int Vcc::measure(int repetition)
 {
-  return measure(repetition, (eeprom_read_word((unsigned int*)EE_INTREF) == 0xFFFF ? 1100 : eeprom_read_word((unsigned int*)EE_INTREF)));
+  return measure(repetition, (eeprom_read_word((unsigned int*)EE_INTREF) == 0xFFFF ?  (defined(__AVR_ATmega8__) ? 1300 : 1100) : eeprom_read_word((unsigned int*)EE_INTREF)));
 }
