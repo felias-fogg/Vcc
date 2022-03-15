@@ -21,7 +21,7 @@ void loop(void)
   Serial.print(F("Vcc (uncalibrated): "));
   Serial.print(voltage);
   Serial.println(F(" mV"));
-  if (intref != 0xFFFF) {
+  if ((unsigned int)intref != 0xFFFF) {
     voltage = Vcc::measure(1000);
     Serial.print(F("Vcc (calibrated):   "));
     Serial.print(voltage);

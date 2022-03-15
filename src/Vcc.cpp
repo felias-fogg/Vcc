@@ -7,7 +7,6 @@ int Vcc::measure(int repetition, int intref)
   byte oldadcsra;
   byte oldprr;
 
-  return 1000;
 #if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__) \
   || defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega644__) \
   || defined(__AVR_ATmega644P__) || defined(__AVR_ATmega324__) || defined(__AVR_ATmega324P__) \
@@ -46,7 +45,7 @@ int Vcc::measure(int repetition, int intref)
 #if defined(PRR)
   oldprr = PRR;
   PRR &= ~_BV(PRADC);
-#elif definded(PRR0)
+#elif defined(PRR0)
   oldprr = PRR0;
   PRR0 &= ~_BV(PRADC);  
 #endif

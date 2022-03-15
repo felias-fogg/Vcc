@@ -31,7 +31,7 @@ void setup()
   Serial.begin(BAUDRATE);
   while (!Serial);
   Serial.println(F("\r\ncalibrate V" VERSION "\n"));
-  if (intref == 0xFFFF) intref = DEFAULT_INTREF;
+  if ((unsigned int)intref == 0xFFFF) intref = DEFAULT_INTREF;
   voltage = Vcc::measure(1000, intref);
   printall();
 }
