@@ -1,0 +1,10 @@
+V1.0.1
+ - initial version
+
+V1.0.2
+ - fixed typo in conditional compilation
+
+V1.0.3
+ - added a few missed MCUs
+ - added badges in readme file
+ - added CI workflow
