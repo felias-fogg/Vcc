@@ -39,20 +39,20 @@ jobs:
           - arduino:avr:uno
           - arduino:avr:leonardo
           - arduino:avr:mega
-	  - MiniCore:avr:8
+          - MiniCore:avr:8
           - MiniCore:avr:88
           - MiniCore:avr:168
-	  - ATTinyCore:avr:attinyx4
-	  - ATTinyCore:avr:attinyx41
+          - ATTinyCore:avr:attinyx4
+          - ATTinyCore:avr:attinyx41
           - ATTinyCore:avr:attinyx5
-	  - ATTinyCore:avr:attinyx61
-	  - ATTinyCore:avr:attinyx7
-	  - ATTinyCore:avr:attinyx8
-	  - ATTinyCore:avr:attiny43
-	  - ATTinyCore:avr:attiny1634
-	  - ATTinyCore:avr:attiny828
-	  - MightyCore:avr:1284
-	  - MightyCore:avr:164
+          - ATTinyCore:avr:attinyx61
+          - ATTinyCore:avr:attinyx7
+          - ATTinyCore:avr:attinyx8
+          - ATTinyCore:avr:attiny43
+          - ATTinyCore:avr:attiny1634
+          - ATTinyCore:avr:attiny828
+          - MightyCore:avr:1284
+          - MightyCore:avr:164
 
         # Choose the right platform for the boards we want to test. (maybe in the future Arduino will automatically do this for you)
         # With sketches-exclude you may exclude specific examples for a board. Use a comma separated list.
