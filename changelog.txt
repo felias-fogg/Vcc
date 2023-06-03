@@ -14,3 +14,6 @@ V1.1.0 (03.06.2023)
  - added internal _intref variable that has higher priority than the
    EEPROM value
  - added setIntref method that can be used ti set the value
+
+V1.1.1 (03.06.2023)
+ - added keyword in keywords.txt
