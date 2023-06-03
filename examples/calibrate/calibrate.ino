@@ -53,7 +53,10 @@ Command: "));
   readline(line);
   Serial.println();
   switch (toupper(line[0])) {
-  case 'S': printall(); break;
+  case 'S':
+    voltage = Vcc::measure(1000, intref);
+    printall();
+    break;
   case 'E': Serial.print(F("Saving current INTREF value to EEPROM at address 0x"));
     Serial.println(EE_ADDR, HEX);
     EEPROM.put(EE_ADDR,intref);

@@ -17,5 +17,8 @@ class Vcc {
  public:
   static int measure(int repetition=10);
   static int measure(int repetition, int intref);
+  static void setIntref(int intref);
+ private:
+  static int _intref;
 };
 #endif

@@ -1,5 +1,7 @@
 #include <Vcc.h>
 
+int Vcc::_intref = 0;
+
 int Vcc::measure(int repetition, int intref)
 {
   int reading;
@@ -87,5 +89,10 @@ int Vcc::measure(int repetition, int intref)
 
 int Vcc::measure(int repetition)
 {
-  return measure(repetition, (eeprom_read_word((unsigned int*)EE_INTREF) == 0xFFFF ?  DEFINTREF : eeprom_read_word((unsigned int*)EE_INTREF)));
+  return measure(repetition, (_intref ? _intref : (eeprom_read_word((unsigned int*)EE_INTREF) == 0xFFFF ?  DEFINTREF : eeprom_read_word((unsigned int*)EE_INTREF))));
+}
+
+void Vcc::setIntref(int intref)
+{
+  _intref = intref;
 }

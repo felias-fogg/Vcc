@@ -29,6 +29,10 @@ void loop(void)
     Serial.print(F("Internal Reference: "));
     Serial.print(intref);
     Serial.println(F(" mV"));
-  }    
-  delay(2000); 
+  }
+  Vcc::setIntref(1050); // set intref value globally ('overrides' value in EEPROM!)
+  Serial.print(F("Vcc (calibrated with a global value of 1050): "));
+  Serial.print(Vcc::measure(1000));
+  Serial.println(F(" mV"));
+  while (1);
 }
