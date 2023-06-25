@@ -13,7 +13,16 @@ V1.0.3
 V1.1.0 (03.06.2023)
  - added internal _intref variable that has higher priority than the
    EEPROM value
- - added setIntref method that can be used ti set the value
+ - added setIntref method that can be used to set the value
 
 V1.1.1 (03.06.2023)
  - added keyword in keywords.txt
+
+V2.0.0 (25.06.2023)
+ - changed interface in EEPROM: E2END-3..E2END-2: intref (-1 meaning
+   no value). The remaining values are used as follows: E2END-1: OSCCAL value is valid, E2END: OSCCAL
+   calibration value. This is at least what the avrCalibrate library uses.
+ - removed ATtiny43U since the test board I own did not give
+   meaningful results - more work is necessary here
+ - added ATtiny26
+

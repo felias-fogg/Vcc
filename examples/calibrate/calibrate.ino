@@ -6,7 +6,7 @@
 
 #define BAUDRATE 9600
 #define DEFAULT_INTREF 1100
-#define VERSION "1.0"
+#define VERSION "2.0"
 
 #include <EEPROM.h>
 #include <Vcc.h>
@@ -16,7 +16,7 @@
 #define LINEMAX 32
 
 #ifdef INTREF_AT_END_OF_EEPROM
-#define EE_ADDR (E2END-1)
+#define EE_ADDR (E2END-3)
 #else
 #define EE_ADDR 0
 #endif

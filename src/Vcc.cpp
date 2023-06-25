@@ -9,8 +9,10 @@ int Vcc::measure(int repetition, int intref)
   byte oldadcsra;
   byte oldprr;
 
-#ifdef __AVR_ATmega8__
+#if defined(__AVR_ATmega8__)
 #define DEFINTREF 1300
+#elif defined(__AVR_ATtiny26__)
+#define DEFINTREF 1180
 #else
 #define DEFINTREF 1100
 #endif
@@ -29,8 +31,8 @@ int Vcc::measure(int repetition, int intref)
   defined (__AVR_ATmega48__) || defined (__AVR_ATmega48A__) || defined (__AVR_ATmega48P__) || \
   defined (__AVR_ATmega48PA__)|| defined (__AVR_ATmega48PB__) || defined(__AVR_ATmega8__) 
   ADMUX = _BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
-#elif  defined(__AVR_ATtiny43U__)
-  ADMUX = _BV(MUX2) || _BV(MUX0);
+  //#elif  defined(__AVR_ATtiny43U__)   //ATtiny43U does not seem to work
+  //ADMUX = _BV(MUX2) || _BV(MUX0);
 #elif  defined(__AVR_ATtiny24__) || defined(__AVR_ATtiny24A__) || defined(__AVR_ATtiny44__) \
   || defined(__AVR_ATtiny44A__) || defined(__AVR_ATtiny84__) || defined(__AVR_ATtiny84A__) 
   ADMUX = _BV(MUX5) | _BV(MUX0);
@@ -40,7 +42,8 @@ int Vcc::measure(int repetition, int intref)
 #elif defined(__AVR_ATtiny25__) || defined(__AVR_ATtiny45__) || defined(__AVR_ATtiny85__)
   ADMUX = _BV(MUX3) | _BV(MUX2);
 #elif defined(__AVR_ATtiny261__) || defined(__AVR_ATtiny261A__) || defined(__AVR_ATtiny461__) \
-  || defined(__AVR_ATtiny461A__) || defined(__AVR_ATtiny861__) || defined(__AVR_ATtiny861A__)
+  || defined(__AVR_ATtiny461A__) || defined(__AVR_ATtiny861__) || defined(__AVR_ATtiny861A__) \
+  || defined(__AVR_ATtiny26__)
   ADMUX = _BV(MUX1) | _BV(MUX2) | _BV(MUX3) | _BV(MUX4);
 #elif defined(__AVR_ATtiny167__) || defined(__AVR_ATtiny87__)
   ADMUX = _BV(MUX3) | _BV(MUX2);
