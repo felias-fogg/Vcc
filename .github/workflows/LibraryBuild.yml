@@ -52,7 +52,7 @@ jobs:
           - ATTinyCore:avr:attinyx4
           - ATTinyCore:avr:attinyx41
           - ATTinyCore:avr:attinyx5
-          - ATTinyCore:avr:attiny26
+       #   - ATTinyCore:avr:attiny26
           - ATTinyCore:avr:attinyx61
           - ATTinyCore:avr:attinyx7
           - ATTinyCore:avr:attinyx8
@@ -72,16 +72,16 @@ jobs:
             platform-url: http://drazzy.com/package_drazzy.com_index.json
           - arduino-boards-fqbn: ATTinyCore:avr:attinyx5
             platform-url: http://drazzy.com/package_drazzy.com_index.json
-          - arduino-boards-fqbn: ATTinyCore:avr:attiny26
-            platform-url: http://drazzy.com/package_drazzy.com_index.json
+          # - arduino-boards-fqbn: ATTinyCore:avr:attiny26
+          #  platform-url: http://drazzy.com/package_drazzy.com_index.json
           - arduino-boards-fqbn: ATTinyCore:avr:attinyx61
             platform-url: http://drazzy.com/package_drazzy.com_index.json
           - arduino-boards-fqbn: ATTinyCore:avr:attinyx7
             platform-url: http://drazzy.com/package_drazzy.com_index.json
           - arduino-boards-fqbn: ATTinyCore:avr:attinyx8
             platform-url: http://drazzy.com/package_drazzy.com_index.json
-          - arduino-boards-fqbn: ATTinyCore:avr:attiny43
-            platform-url: http://drazzy.com/package_drazzy.com_index.json
+          # - arduino-boards-fqbn: ATTinyCore:avr:attiny43
+          #  platform-url: http://drazzy.com/package_drazzy.com_index.json
           - arduino-boards-fqbn: ATTinyCore:avr:attiny1634
             platform-url: http://drazzy.com/package_drazzy.com_index.json
           - arduino-boards-fqbn: ATTinyCore:avr:attiny828
