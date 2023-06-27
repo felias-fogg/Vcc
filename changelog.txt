@@ -26,3 +26,9 @@ V2.0.0 (25.06.2023)
    meaningful results - more work is necessary here
  - added ATtiny26
 
+V2.1.0 (26.06.2023)
+ - added ATmega16, 32, 8535
+
+V2.2.0 (27.06.2023)
+ - new constant DEFAULT_INTREF, which is the default internal
+   reference voltage

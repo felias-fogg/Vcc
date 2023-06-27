@@ -9,18 +9,12 @@ int Vcc::measure(int repetition, int intref)
   byte oldadcsra;
   byte oldprr;
 
-#if defined(__AVR_ATmega8__)
-#define DEFINTREF 1300
-#elif defined(__AVR_ATtiny26__)
-#define DEFINTREF 1180
-#else
-#define DEFINTREF 1100
-#endif
 
 #if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)		\
   || defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega644__) || defined(__AVR_ATmega644A__)  \
   || defined(__AVR_ATmega644P__) || defined(__AVR_ATmega644PA__) || defined(__AVR_ATmega324__) || defined(__AVR_ATmega324A__) || defined(__AVR_ATmega324PA__)  \
   || defined(__AVR_ATmega324P__) || defined(__AVR_ATmega164__) || defined(__AVR_ATmega164A__) || defined(__AVR_ATmega164PA__) || defined(__AVR_ATmega164P__)  \
+  || defined(__AVR_ATmega16__) || defined(__AVR_ATmega32__) || defined(__AVR_ATmega8535__) \
   || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega16U4__) 
   ADMUX =  _BV(REFS0) | _BV(MUX4) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
 #elif defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) ||  defined(__AVR_ATmega328PB__) || \
@@ -92,7 +86,7 @@ int Vcc::measure(int repetition, int intref)
 
 int Vcc::measure(int repetition)
 {
-  return measure(repetition, (_intref ? _intref : (eeprom_read_word((unsigned int*)EE_INTREF) == 0xFFFF ?  DEFINTREF : eeprom_read_word((unsigned int*)EE_INTREF))));
+  return measure(repetition, (_intref ? _intref : (eeprom_read_word((unsigned int*)EE_INTREF) == 0xFFFF ?  DEFAULT_INTREF : eeprom_read_word((unsigned int*)EE_INTREF))));
 }
 
 void Vcc::setIntref(int intref)
