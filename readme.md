@@ -2,7 +2,6 @@ Vcc
 ===
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Installation instructions](https://www.ardu-badge.com/badge/Vcc.svg?)](https://www.ardu-badge.com/Vcc)
 [![Commits since latest](https://img.shields.io/github/commits-since/felias-fogg/Vcc/latest)](https://github.com/felias-fogg/Vcc/commits/master)
 [![Build Status](https://github.com/felias-fogg/Vcc/workflows/LibraryBuild/badge.svg)](https://github.com/felias-fogg/Vcc/actions)
 ![Hit Counter](https://visitor-badge.laobi.icu/badge?page_id=felias-fogg_Vcc)
