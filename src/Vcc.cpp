@@ -7,7 +7,9 @@ int Vcc::measure(int repetition, int intref)
   int reading;
   long acc;
   byte oldadcsra;
-  byte oldprr;#if defined(__AVR_ATmega165__) || defined(__AVR_ATmega165A__) || defined(__AVR_ATmega165PA__) || \
+  byte oldprr;
+
+#if defined(__AVR_ATmega165__) || defined(__AVR_ATmega165A__) || defined(__AVR_ATmega165PA__) || \
   defined(__AVR_ATmega169__) || defined(__AVR_ATmega169A__) || defined(__AVR_ATmega169PA__) || \
   defined(__AVR_ATmega325__) || defined(__AVR_ATmega325A__) || defined(__AVR_ATmega325PA__) || \
   defined(__AVR_ATmega329__) || defined(__AVR_ATmega329A__) || defined(__AVR_ATmega329PA__) || \

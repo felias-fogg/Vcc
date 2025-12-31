@@ -33,5 +33,5 @@ v2.2.0 (27.06.2023)
  - new constant DEFAULT_INTREF, which is the default internal
    reference voltage
 
-v2.3.0 (31.12.2025)
+v2.3.1 (31.12.2025)
  - added a few more MCUs
