@@ -1,6 +1,6 @@
 {
     "name": "Vcc",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "keywords": "Supply voltage",
     "description": "Measures supply voltage",
     "repository":
