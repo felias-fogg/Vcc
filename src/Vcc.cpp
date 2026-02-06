@@ -9,16 +9,20 @@ int Vcc::measure(int repetition, int intref)
   byte oldadcsra;
   byte oldprr;
 
-#if defined(__AVR_ATmega165__) || defined(__AVR_ATmega165A__) || defined(__AVR_ATmega165PA__) || \
-  defined(__AVR_ATmega169__) || defined(__AVR_ATmega169A__) || defined(__AVR_ATmega169PA__) || \
-  defined(__AVR_ATmega325__) || defined(__AVR_ATmega325A__) || defined(__AVR_ATmega325PA__) || \
-  defined(__AVR_ATmega329__) || defined(__AVR_ATmega329A__) || defined(__AVR_ATmega329PA__) || \
-  defined(__AVR_ATmega645__) || defined(__AVR_ATmega645A__) || defined(__AVR_ATmega645PA__) || \
-  defined(__AVR_ATmega649__) || defined(__AVR_ATmega649A__) || defined(__AVR_ATmega649PA__) || \
-  defined(__AVR_ATmega3250__) || defined(__AVR_ATmega3250A__) || defined(__AVR_ATmega3250PA__) || \
-  defined(__AVR_ATmega3290__) || defined(__AVR_ATmega3290A__) || defined(__AVR_ATmega3290PA__) || \
-  defined(__AVR_ATmega6450__) || defined(__AVR_ATmega6450A__) || defined(__AVR_ATmega6450PA__) || \
-  defined(__AVR_ATmega6490__) || defined(__AVR_ATmega6490A__) || defined(__AVR_ATmega6490PA__) || \
+#if defined(__AVR_ATmega165P__) || defined(__AVR_ATmega165A__) || defined(__AVR_ATmega165PA__) || \
+  defined(__AVR_ATmega169P__) || defined(__AVR_ATmega169A__) || defined(__AVR_ATmega169PA__) || \
+  defined(__AVR_ATmega325__) || defined(__AVR_ATmega325A__) || \
+  defined(__AVR_ATmega325P__) || defined(__AVR_ATmega325PA__) || \
+  defined(__AVR_ATmega329__) || defined(__AVR_ATmega329A__) || \
+  defined(__AVR_ATmega329P__) || defined(__AVR_ATmega329PA__) || \
+  defined(__AVR_ATmega645__) || defined(__AVR_ATmega645A__) || defined(__AVR_ATmega645P__) || \
+  defined(__AVR_ATmega649__) || defined(__AVR_ATmega649A__) || defined(__AVR_ATmega649P__) || \
+  defined(__AVR_ATmega3250__) || defined(__AVR_ATmega3250A__) || \
+  defined(__AVR_ATmega3250P__) || defined(__AVR_ATmega3250PA__) || \
+  defined(__AVR_ATmega3290__) || defined(__AVR_ATmega3290A__) || \
+  defined(__AVR_ATmega3290P__) || defined(__AVR_ATmega3290PA__) || \
+  defined(__AVR_ATmega6450__) || defined(__AVR_ATmega6450A__) || defined(__AVR_ATmega6450P__) || \
+  defined(__AVR_ATmega6490__) || defined(__AVR_ATmega6490A__) || defined(__AVR_ATmega6490P__) || \
   defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__) || \
   defined(__AVR_ATmega1281__) || defined(__AVR_ATmega2561__) || \
   defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__) || \
@@ -35,7 +39,8 @@ int Vcc::measure(int repetition, int intref)
   defined(__AVR_ATmega128A__) || defined(__AVR_ATmega8535__) || \
   defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega16U4__) || \
   defined(__AVR_AT90USB646__) ||   defined(__AVR_AT90USB647__) || \
-  defined(__AVR_AT90USB1286__) ||   defined(__AVR_AT90USB1287__) 
+  defined(__AVR_AT90USB1286__) ||   defined(__AVR_AT90USB1287__) || \
+  defined(__AVR_AT90CAN32__) ||  defined(__AVR_AT90CAN64__) ||  defined(__AVR_AT90CAN128__) 
   ADMUX =  _BV(REFS0) | _BV(MUX4) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
 #elif defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) || \
   defined(__AVR_ATmega328PB__) ||  defined (__AVR_ATmega168__) || \
@@ -70,7 +75,7 @@ int Vcc::measure(int repetition, int intref)
 #elif defined(__AVR_ATtiny1634__)
   ADMUX = _BV(MUX3) | _BV(MUX2) | _BV(MUX0);
 #elif defined(__AVR_ATmega16M1__) || defined(__AVR_ATmega32M1__) || \
-  defined(__AVR_ATmega64M1__) || defined(__AVR_ATmega32C1__) ||
+  defined(__AVR_ATmega64M1__) || defined(__AVR_ATmega32C1__) || \
   defined(__AVR_ATmega64C1__) 
     ADMUX = _BV(MUX4) | _BV(MUX0) | _BV(REFS0);
 #elif defined(__AVR_AT90PWM1__) || defined(__AVR_AT90PWM2__) || defined(__AVR_AT90PWM2B__) || \

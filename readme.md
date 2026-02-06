@@ -26,6 +26,6 @@ The other flavor of the method uses a calibration value that is stored in EEPROM
     ...
     milliVolts = Vcc::measure(100, 1100); // 100 repetitions, 1100 as calibration value
 
-The library should work with ATmega8, ATmegaX8, ATmegaXu4, ATmegaX4, ATmegaX0, ATmega16, ATmega32, ATmega8535, ~~ATtiny43U~~, ATtinyX4(A), ATtinyX41, ATtinyX5, ATtiny26, ATtinyX61(A), ATtinyX7, ATtinyX8, ATtiny828, and ATtiny1634. It will not work with ATtinyX13 because of the lack of an ADC. Similarly, it does not work with ATtiny13 because this chip does not support measuring Vcc. 
+The library should work with almost all MCUs supported by ATTinyCore, MiniCore, MightCore, MegaCore, and MajorCore. It will not work with ATtinyX13 because of the lack of an ADC. Similarly, it does not work with ATtiny13 because this chip does not support measuring Vcc. 
 
 The library is licensed under the MIT license.
